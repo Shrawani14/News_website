@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-text-color:#123456;
+    --secondary-text-color:#577592;
+    --accent-color: #2294ed;
+    --accent-color-dark: #1d69a3;
+}
+body{
+    font-family: 'Poppins', sans-serif  ; 
+    color: var(--primary-text-color) ;
+    height: 100vh;
+    width: 100%;
+    
+    
+}
+
+p{
+    font-family: "Roboto", sans-serif;
+    color: var(--secondary-text-color);
+    line-height: 1.4rem;
+}
+
+a{
+    text-decoration: none ; 
+}
+ul{
+    list-style: none;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.cotainer{
+    max-width: 1180px;
+    margin-inline: auto;
+    overflow: hidden;
+    
+}
+
+ nav{
+    
+    background-color: #d0d8de;
+    box-shadow: 0 0 4px #afc4d5;
+    align-items: center; 
+    position: relative;
+    top: 0;
+    z-index: 99;
+    left: 0;
+    right: 0; 
+    font-size: 28px;
+    
+   
+}
+
+.main-nav{
+    justify-content: space-between;
+     padding: 10px 0; 
+}
+
+.company-logo img{
+    width: 130px;
+    padding-left: 50px;
+     
+  
+}
+
+
+.nav-links ul{
+    gap: 20px;
+    align-items: center;
+}
+
+.hover-link {
+    cursor: pointer;
+}
+
+.hover-link:hover {
+    color: var(--secondary-text-color);
+}
+
+.hover-link:active{
+    color: rgba(3, 3, 3, 0.792);
+} 
+
+.nav-item.active {
+    color: var(--accent-color) ;
+}
+
+.search-bar {
+    height: 32px;
+    gap: 8px;
+    padding-right: 40px;
+}
+
+.news-input {
+    width: 200px;
+    height: 100%;
+    padding-inline: 12px;
+    border-radius: 4px;
+    border: 2px solid #97aec2;
+    font-family: "Roboto", sans-serif;
+}
+
+.search-button {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 8px 24px;
+    padding-right: 34px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+}
+
+.search-button:hover {
+    background-color: var(--accent-color-dark);
+}
+
+main {
+    padding-block: 50px;
+    margin-top: 10px;
+}
+
+.cards-container{
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    align-items: start;
+    padding: 80px;
+}
+
+.card{
+    width: 380px;
+    min-height: 440px;
+    box-shadow: 0 0 4px #a4bade;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #f1f1f1;
+    overflow: hidden;
+    /* transition: all 0.9s ease; */
+    transition: all .40s ease;
+    
+}
+
+.card:hover{
+    box-shadow:1px 1px 8px #d4ecff ;
+    background-color: #f9fdff;
+    transform: translateY(-2px);
+    
+}
+
+.card-header img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 12px;
+}
+
+.news-source {
+    margin-block: 12px;
+}
+
+section{
+    padding: 50px 13% 70px;
+}
+
+.footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px , auto));
+    gap: 3.5rem;
+    background-color: #d0d8de;
+    position:relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+}
+
+.footer-content h4{
+    color: var(--primary-text-color);
+    margin-bottom: 1.5rem;
+    font-size: 30px;
+    padding-top: 25px;
+
+}
+
+/* .footer-content li{
+    margin-bottom: 16px;
+}
+*/
+.footer-content li a{
+     display:inline-block; 
+    color: var(--primary-text-color);
+    /* font-size: 30px; */
+   font-weight: 200;
+    transition: all .40s ease;
+    padding-right: 40px;
+    inset-inline-end: 20px;
+}
+
+.footer-content li a:hover{
+    transform: translate(-3px) translateX(-5px);
+    color: #67a5d7;
+} 
+.footer-content li a{
+    color: #0b3f67;
+    font-size: 20px;
+}
+
+.footer-content p{
+    font-size: 30px;
+    padding-bottom: 20px;
+    color: #06090b;
+    padding-top: 2px;
+    margin-right: 12px;
+    font-weight: 500;
+    
+}
+
+
+.icons a {
+    display: inline-block;
+    font-size: 28px;
+    color: #080b0e;
+    margin-right: 17px;
+    transition: all .40s ease;
+}
+.icons a :hover{
+    color:#67a5d7 ;
+    transform: translateY(-5px) ;
+}
+.footer-content img{
+    width: 120px;
+    padding-bottom: 10px;
+}
+
+@media (max-width:1690px){
+    section{
+        padding: 50px 5% 40px;
+    }
+}
+
+@media (max-widht: 1120px){
+    .footer{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px , auto));
+        gap: 2.5rem;
+    }
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="./assests/21601.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News App</title>
+    <link rel="stylesheet" href="style.css">
+
+<!-- google fonts links -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+<!-- Boxicon font links -->
+<link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+</head>
+<body>
+    
+    <nav>
+       <div class="main-nav container flex">
+            <a href="#" onclick="reload()" class="company-logo">
+               <img src="./assests/21601.png" alt="company logo"> 
+            </a>
+            <div class="nav-links">
+                <ul class="flex">
+                    <li class="hover-link nav-item" id="ipl" onclick="onNavItemClick('ipl')">IPL</li>
+                    <li class="hover-link nav-item" id="finance" onclick="onNavItemClick('finance')">Finance</li>
+                    <li class="hover-link nav-item" id="politics" onclick="onNavItemClick('politics')">Politics</li>
+                    <li class="hover-link nav-item" id="technology" onclick="onNavItemClick('technology')">Technology</li>
+                </ul>
+            </div>
+
+            <div class="search-bar flex">
+                <input id="search-text" type="text" class="news-input" placeholder="e.g Science">
+                <button id="search-button" class="search-button">Search</button>
+            </div>
+       </div>
+    </nav>
+
+    <main>
+        <div class="cards-container container flex" id="cards-container">
+            
+            </div>
+
+        </div>
+    </main>
+
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This is the title</h3>
+                <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+                <p class="news-desc" id="news-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui saepe velit vel non aperiam cupiditate error perferendis iste itaque nisi!</p>
+            </div>
+        </div>
+    </template>
+
+
+    <!-- footer section design -->
+    <section class="footer">
+        <div class="footer-content">
+             <img src="./assests/21601.png" > 
+            <p>Explore the News</p>
+
+            <div class="icons">
+                <a href="#"><i class='bx bxl-facebook-circle'></i> </a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-youtube'></i></a>
+                <a href="#"></a>
+            </div>
+        </div>
+        <div class="footer-content">
+            <h4>Projects</h4>
+            <li><a href="#">Houses</a></li>
+            <li><a href="#">Rooms</a></li>
+            <li><a href="#">Flats</a></li>
+            <li><a href="#">Appt</a></li>
+        </div>
+
+        <div class="footer-content">
+            <h4>Explore</h4>
+            <li><a href="#">work culture</a></li>
+            <li><a href="#">Capital</a></li>
+            <li><a href="#">Future</a></li>
+            <li><a href="#">Weather</a></li>
+        </div>
+
+        <div class="footer-content">
+            <h4>Popular</h4>
+            <li><a href="#">India</a></li>
+            <li><a href="#">World</a></li>
+            <li><a href="#">Business</a></li>
+            <li><a href="#">Sport</a></li>
+        </div>
+
+        <div class="footer-content">
+            <h4>Contact</h4>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Social Media</a></li>
+            <li><a href="#">Averstise</a></li>
+            <li><a href="#">Appt</a></li> 
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
